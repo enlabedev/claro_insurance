@@ -1,0 +1,60 @@
+<div class="container">
+  <header class="jumbotron">
+    <div>
+      <h1>
+        Students
+      </h1>
+      <div class="text-end mb-4">
+        <button class=" btn btn-primary" (click)="create()">Create</button>
+      </div>
+
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Lastname
+          </th>
+          <th>
+            Age
+          </th>
+          <th>
+            Cedula
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of content">
+          <td>
+            {{student.name}}
+          </td>
+          <td>
+            {{student.lastname}}
+          </td>
+          <td>
+            {{student.age}}
+          </td>
+          <td>
+            {{student.cedula}}
+          </td>
+          <td>
+            {{student.email}}
+          </td>
+          <td>
+            <button class="btn btn-primary" (click)="edit(student.id)">Edit</button>
+            <button class="btn btn-danger" (click)="delete(student.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </header>
+</div>

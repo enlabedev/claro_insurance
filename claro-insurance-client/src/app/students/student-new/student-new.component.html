@@ -1,0 +1,35 @@
+<form (ngSubmit)="onSubmit($event)">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input type="text" class="form-control" id="lastname" [(ngModel)]="lastname" name="lastname">
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" class="form-control" id="age" [(ngModel)]="age" name="age">
+  </div>
+
+  <div class="form-group">
+    <label for="cedula">Cedula</label>
+    <input type="text" class="form-control" id="cedula" [(ngModel)]="cedula" name="cedula">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="course">Course</label>
+    <select class="form-select" [(ngModel)]="course_id" id="course" name="course">
+      <option *ngFor="let course of courses" [value]="course.id">{{course.name}}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
